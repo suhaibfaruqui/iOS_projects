@@ -6,4 +6,5 @@ Assignment3-Maps,
 Assignment4-SQLite DB, 
 Assignment5-Photo editing app, 
 MyStore-CoreData, 
+SocialSharing-Fetching tweets from twitter and images from Flikr, 
 
