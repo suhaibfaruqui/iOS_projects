@@ -74,7 +74,7 @@
 
 
         [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
-            NSLog(@"Found placemarks: %@, error: %@", placemarks, error);
+            //NSLog(@"Found placemarks: %@, error: %@", placemarks, error);
             if (error == nil && [placemarks count] > 0) {
                 placemark = [placemarks lastObject];
                 /*
@@ -84,7 +84,7 @@
                  placemark.administrativeArea,
                  placemark.country];
                  */
-                myLocation.title = placemark.country;
+                myLocation.title = placemark.name;
                 myLocation.subtitle = placemark.administrativeArea;
 
                 
@@ -142,4 +142,30 @@
 
 
 
+- (IBAction)getAtms:(id)sender {
+    // Create and initialize a search request object.
+    MKLocalSearchRequest *request = [[MKLocalSearchRequest alloc] init];
+    request.naturalLanguageQuery = @"atm";
+    request.region = mapView.region;
+    
+    // Create and initialize a search object.
+    MKLocalSearch *search = [[MKLocalSearch alloc] initWithRequest:request];
+    
+    // Start the search and display the results as annotations on the map.
+    [search startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error)
+    {
+        NSMutableArray *placemarks = [NSMutableArray array];
+        for (MKMapItem *item in response.mapItems) {
+            //[placemarks addObject:item.placemark];
+            NSLog(@"%@", item.placemark.name);
+            MyCustomAnnotation *point = [[MyCustomAnnotation alloc] initWithLocation:item.placemark.coordinate];
+          //  [mapView addAnnotation:point];
+            [placemarks addObject:point];
+
+        }
+        //MyCustomAnnotation *point = [[MyCustomAnnotation alloc] init];
+        //[mapView removeAnnotations:[mapView annotations]];
+       [mapView showAnnotations:placemarks animated:NO];
+    }];
+}
 @end

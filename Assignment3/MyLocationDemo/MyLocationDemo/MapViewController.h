@@ -11,5 +11,6 @@
 
 @interface MapViewController : UIViewController <MKMapViewDelegate>
 @property (strong, nonatomic) IBOutlet MKMapView *mapView;
+- (IBAction)getAtms:(id)sender;
 
 @end

@@ -23,9 +23,6 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rJ6-iJ-inp">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <animations/>
-                                <variation key="heightClass=regular-widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="7" y="64" width="388" height="687"/>
-                                </variation>
                             </mapView>
                         </subviews>
                         <animations/>
@@ -59,7 +56,19 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="My Home Location" id="FUd-Ww-u8U"/>
+                    <navigationItem key="navigationItem" title="My Home Location" id="FUd-Ww-u8U">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="GGc-JO-Z1g">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FEt-8Z-g7D">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="Atm"/>
+                                <connections>
+                                    <action selector="getAtms:" destination="hWE-Ub-BLA" eventType="touchUpInside" id="X5W-ke-Xgd"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="rJ6-iJ-inp" id="qZB-RV-zDT"/>
                         <segue destination="HEL-Iq-Srq" kind="push" identifier="details" id="UMe-kT-lpo"/>
@@ -108,7 +117,7 @@
                                     <constraint firstAttribute="height" constant="21" id="6JC-pb-FCk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -138,12 +147,12 @@
                                 <exclude reference="UaX-aH-BEk"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="CUS-NL-Yc2"/>
                                 <exclude reference="0WX-Sx-x5L"/>
                                 <exclude reference="SPG-T5-WrS"/>
                                 <exclude reference="nJ1-F2-0ga"/>
                                 <exclude reference="cI6-Pt-HLt"/>
                                 <exclude reference="wBL-t3-HLG"/>
-                                <exclude reference="CUS-NL-Yc2"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -152,12 +161,12 @@
                                 <include reference="UaX-aH-BEk"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="CUS-NL-Yc2"/>
                                 <include reference="0WX-Sx-x5L"/>
                                 <include reference="SPG-T5-WrS"/>
                                 <include reference="nJ1-F2-0ga"/>
                                 <include reference="cI6-Pt-HLt"/>
                                 <include reference="wBL-t3-HLG"/>
-                                <include reference="CUS-NL-Yc2"/>
                             </mask>
                         </variation>
                     </view>
@@ -186,42 +195,42 @@
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wCD-Nq-yYv">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lobgitude:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yDR-am-FGJ">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3L-gS-vYK">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cg9-S7-8nY">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click Button to get your current location" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="foi-pR-c1A">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ex-Nz-yHH">
@@ -257,7 +266,7 @@
                                     <constraint firstAttribute="width" constant="172" id="xsm-pf-ttR"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -311,17 +320,11 @@
                                 <exclude reference="Iiu-0A-6bA"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Ky0-JW-k97"/>
-                                <exclude reference="ROd-0t-w2s"/>
-                                <exclude reference="wCU-Qo-AKM"/>
+                                <exclude reference="9ao-Nq-cVS"/>
+                                <exclude reference="ehF-32-rbe"/>
                                 <exclude reference="7ol-8X-zFC"/>
-                                <exclude reference="K5j-Ne-adZ"/>
-                                <exclude reference="BRr-Ap-EVv"/>
-                                <exclude reference="HpG-A1-lWu"/>
-                                <exclude reference="KlE-Hu-LNL"/>
-                                <exclude reference="P6z-OO-dOj"/>
-                                <exclude reference="EUt-mO-h5c"/>
-                                <exclude reference="UAx-yb-9cf"/>
+                                <exclude reference="d1n-YP-9kv"/>
+                                <exclude reference="xzE-jY-Xhu"/>
                                 <exclude reference="78s-eB-Qzw"/>
                                 <exclude reference="D1C-6X-ZLL"/>
                                 <exclude reference="JxD-1z-htj"/>
@@ -329,10 +332,16 @@
                                 <exclude reference="bZr-Vc-84r"/>
                                 <exclude reference="gsp-i8-nhV"/>
                                 <exclude reference="lf8-kz-A09"/>
-                                <exclude reference="d1n-YP-9kv"/>
-                                <exclude reference="xzE-jY-Xhu"/>
-                                <exclude reference="ehF-32-rbe"/>
-                                <exclude reference="9ao-Nq-cVS"/>
+                                <exclude reference="BRr-Ap-EVv"/>
+                                <exclude reference="HpG-A1-lWu"/>
+                                <exclude reference="KlE-Hu-LNL"/>
+                                <exclude reference="P6z-OO-dOj"/>
+                                <exclude reference="Ky0-JW-k97"/>
+                                <exclude reference="ROd-0t-w2s"/>
+                                <exclude reference="wCU-Qo-AKM"/>
+                                <exclude reference="EUt-mO-h5c"/>
+                                <exclude reference="UAx-yb-9cf"/>
+                                <exclude reference="K5j-Ne-adZ"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -347,17 +356,11 @@
                                 <include reference="Iiu-0A-6bA"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Ky0-JW-k97"/>
-                                <include reference="ROd-0t-w2s"/>
-                                <include reference="wCU-Qo-AKM"/>
+                                <include reference="9ao-Nq-cVS"/>
+                                <include reference="ehF-32-rbe"/>
                                 <include reference="7ol-8X-zFC"/>
-                                <include reference="K5j-Ne-adZ"/>
-                                <include reference="BRr-Ap-EVv"/>
-                                <include reference="HpG-A1-lWu"/>
-                                <include reference="KlE-Hu-LNL"/>
-                                <include reference="P6z-OO-dOj"/>
-                                <include reference="EUt-mO-h5c"/>
-                                <include reference="UAx-yb-9cf"/>
+                                <include reference="d1n-YP-9kv"/>
+                                <include reference="xzE-jY-Xhu"/>
                                 <include reference="78s-eB-Qzw"/>
                                 <include reference="D1C-6X-ZLL"/>
                                 <include reference="JxD-1z-htj"/>
@@ -365,10 +368,16 @@
                                 <include reference="bZr-Vc-84r"/>
                                 <include reference="gsp-i8-nhV"/>
                                 <include reference="lf8-kz-A09"/>
-                                <include reference="d1n-YP-9kv"/>
-                                <include reference="xzE-jY-Xhu"/>
-                                <include reference="ehF-32-rbe"/>
-                                <include reference="9ao-Nq-cVS"/>
+                                <include reference="BRr-Ap-EVv"/>
+                                <include reference="HpG-A1-lWu"/>
+                                <include reference="KlE-Hu-LNL"/>
+                                <include reference="P6z-OO-dOj"/>
+                                <include reference="Ky0-JW-k97"/>
+                                <include reference="ROd-0t-w2s"/>
+                                <include reference="wCU-Qo-AKM"/>
+                                <include reference="EUt-mO-h5c"/>
+                                <include reference="UAx-yb-9cf"/>
+                                <include reference="K5j-Ne-adZ"/>
                             </mask>
                         </variation>
                     </view>
@@ -432,6 +441,7 @@
                         <viewControllerLayoutGuide type="bottom" id="G2D-up-CPe"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="NXU-3k-2cx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yua-SE-cH5">
@@ -468,13 +478,13 @@
                                 <exclude reference="wIE-Bx-laM"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="ofl-r9-92L"/>
                                 <exclude reference="1B5-BP-boE"/>
                                 <exclude reference="Dy5-7V-GLN"/>
                                 <exclude reference="FM5-fV-hBK"/>
                                 <exclude reference="QLT-mc-CNA"/>
                                 <exclude reference="UqV-iN-sUj"/>
                                 <exclude reference="lfA-bz-5V0"/>
-                                <exclude reference="ofl-r9-92L"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -483,13 +493,13 @@
                                 <include reference="wIE-Bx-laM"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="ofl-r9-92L"/>
                                 <include reference="1B5-BP-boE"/>
                                 <include reference="Dy5-7V-GLN"/>
                                 <include reference="FM5-fV-hBK"/>
                                 <include reference="QLT-mc-CNA"/>
                                 <include reference="UqV-iN-sUj"/>
                                 <include reference="lfA-bz-5V0"/>
-                                <include reference="ofl-r9-92L"/>
                             </mask>
                         </variation>
                     </view>

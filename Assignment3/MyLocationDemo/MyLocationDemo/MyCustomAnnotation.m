@@ -37,7 +37,7 @@
     MKAnnotationView *annotationView = [[MKAnnotationView alloc] initWithAnnotation:self reuseIdentifier:@"MyCustomAnnotation"];
     annotationView.enabled = YES;
     annotationView.canShowCallout = YES;
-    annotationView.image = [UIImage imageNamed:@"image1.jpg"];
+    annotationView.image = [UIImage imageNamed:@"map_pin.png"];
     //annotationView.image.size = CGSizeMake(14, 14);
     //UILabel *fromLabel = [[UILabel alloc]initWithFrame:CGRectMake(91, 15, 0, 0)];
     //fromLabel.text = @"213kkkkbjvhviuycuycyivbvyuviblbuoviuvbb\njbjbjbl\nnknlnn";

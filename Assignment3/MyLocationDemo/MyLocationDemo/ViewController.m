@@ -26,7 +26,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     locationManager = [[CLLocationManager alloc] init];
-    NSLog(@"the rock");
+    //NSLog(@"the rock");
     geocoder = [[CLGeocoder alloc] init];
     
 
@@ -78,7 +78,7 @@
     
     NSLog(@"Resolving the Address");
     [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
-        NSLog(@"Found placemarks: %@, error: %@", placemarks, error);
+      //  NSLog(@"Found placemarks: %@, error: %@", placemarks, error);
         if (error == nil && [placemarks count] > 0) {
             placemark = [placemarks lastObject];
             addressLabel.text = [NSString stringWithFormat:@"%@ %@\n%@\n%@",

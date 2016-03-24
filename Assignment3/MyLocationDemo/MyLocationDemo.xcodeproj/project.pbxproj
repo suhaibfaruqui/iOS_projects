@@ -7,10 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE2044EC1CA4695A00684120 /* map_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = CE2044EB1CA4695A00684120 /* map_pin.png */; };
 		CE98E2E81C27072A006EF8F6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE98E2E71C27072A006EF8F6 /* MapKit.framework */; };
 		CE98E2EB1C2707F0006EF8F6 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE98E2EA1C2707F0006EF8F6 /* MapViewController.m */; };
 		CE98E2EE1C270C66006EF8F6 /* MyCustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = CE98E2ED1C270C66006EF8F6 /* MyCustomAnnotation.m */; };
-		CE98E2F21C270D61006EF8F6 /* image1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE98E2F11C270D61006EF8F6 /* image1.jpg */; };
 		CE98E2F51C273D8F006EF8F6 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE98E2F41C273D8F006EF8F6 /* DetailViewController.m */; };
 		CEB444E31C1F4BD10060D3FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB444E21C1F4BD10060D3FA /* main.m */; };
 		CEB444E61C1F4BD10060D3FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB444E51C1F4BD10060D3FA /* AppDelegate.m */; };
@@ -23,12 +23,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE2044EB1CA4695A00684120 /* map_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin.png; sourceTree = "<group>"; };
 		CE98E2E71C27072A006EF8F6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		CE98E2E91C2707F0006EF8F6 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		CE98E2EA1C2707F0006EF8F6 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		CE98E2EC1C270C66006EF8F6 /* MyCustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCustomAnnotation.h; sourceTree = "<group>"; };
 		CE98E2ED1C270C66006EF8F6 /* MyCustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCustomAnnotation.m; sourceTree = "<group>"; };
-		CE98E2F11C270D61006EF8F6 /* image1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = image1.jpg; sourceTree = "<group>"; };
 		CE98E2F31C273D8F006EF8F6 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		CE98E2F41C273D8F006EF8F6 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		CEB444DE1C1F4BD10060D3FA /* MyLocationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +62,7 @@
 		CEB444D51C1F4BD10060D3FA = {
 			isa = PBXGroup;
 			children = (
+				CE2044EB1CA4695A00684120 /* map_pin.png */,
 				CE98E2E71C27072A006EF8F6 /* MapKit.framework */,
 				CEB444F81C1F532A0060D3FA /* CoreLocation.framework */,
 				CEB444E01C1F4BD10060D3FA /* MyLocationDemo */,
@@ -80,7 +81,6 @@
 		CEB444E01C1F4BD10060D3FA /* MyLocationDemo */ = {
 			isa = PBXGroup;
 			children = (
-				CE98E2F11C270D61006EF8F6 /* image1.jpg */,
 				CEB444E41C1F4BD10060D3FA /* AppDelegate.h */,
 				CEB444E51C1F4BD10060D3FA /* AppDelegate.m */,
 				CEB444E71C1F4BD10060D3FA /* ViewController.h */,
@@ -169,8 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				CEB444F11C1F4BD10060D3FA /* LaunchScreen.storyboard in Resources */,
-				CE98E2F21C270D61006EF8F6 /* image1.jpg in Resources */,
 				CEB444EE1C1F4BD10060D3FA /* Assets.xcassets in Resources */,
+				CE2044EC1CA4695A00684120 /* map_pin.png in Resources */,
 				CEB444EC1C1F4BD10060D3FA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

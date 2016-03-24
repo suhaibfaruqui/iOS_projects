@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE2044E81CA4355700684120 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2044E71CA4355700684120 /* Launch Screen.storyboard */; };
 		CE6681F01C53BFAF00B4C69C /* FlickrViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6681EF1C53BFAF00B4C69C /* FlickrViewController.m */; };
 		CE6681F31C54034E00B4C69C /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6681F21C54034E00B4C69C /* DetailsViewController.m */; };
 		CE7B15241C4EBFF600BD0D36 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE7B15231C4EBFF600BD0D36 /* TableViewCell.m */; };
@@ -15,12 +16,12 @@
 		CEA63FFA1C4A91F200124A8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEA63FF91C4A91F200124A8A /* ViewController.m */; };
 		CEA63FFD1C4A91F200124A8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA63FFB1C4A91F200124A8A /* Main.storyboard */; };
 		CEA63FFF1C4A91F200124A8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEA63FFE1C4A91F200124A8A /* Assets.xcassets */; };
-		CEA640021C4A91F200124A8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEA640001C4A91F200124A8A /* LaunchScreen.storyboard */; };
 		CEA6400A1C4A965900124A8A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEA640091C4A965900124A8A /* Social.framework */; };
 		CED9D5231C4BD198001A6864 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CED9D5221C4BD198001A6864 /* Accounts.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE2044E71CA4355700684120 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		CE6681EE1C53BFAF00B4C69C /* FlickrViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlickrViewController.h; sourceTree = "<group>"; };
 		CE6681EF1C53BFAF00B4C69C /* FlickrViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlickrViewController.m; sourceTree = "<group>"; };
 		CE6681F11C54034E00B4C69C /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
@@ -35,7 +36,6 @@
 		CEA63FF91C4A91F200124A8A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		CEA63FFC1C4A91F200124A8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEA63FFE1C4A91F200124A8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		CEA640011C4A91F200124A8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEA640031C4A91F200124A8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEA640091C4A965900124A8A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		CED9D5221C4BD198001A6864 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
@@ -54,6 +54,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CE2044E91CA4372B00684120 /* Flikr */ = {
+			isa = PBXGroup;
+			children = (
+				CE7B15221C4EBFF600BD0D36 /* TableViewCell.h */,
+				CE7B15231C4EBFF600BD0D36 /* TableViewCell.m */,
+				CE6681EE1C53BFAF00B4C69C /* FlickrViewController.h */,
+				CE6681EF1C53BFAF00B4C69C /* FlickrViewController.m */,
+				CE6681F11C54034E00B4C69C /* DetailsViewController.h */,
+				CE6681F21C54034E00B4C69C /* DetailsViewController.m */,
+			);
+			name = Flikr;
+			sourceTree = "<group>";
+		};
+		CE2044EA1CA4374000684120 /* twitter */ = {
+			isa = PBXGroup;
+			children = (
+				CEA63FF81C4A91F200124A8A /* ViewController.h */,
+				CEA63FF91C4A91F200124A8A /* ViewController.m */,
+			);
+			name = twitter;
+			sourceTree = "<group>";
+		};
 		CEA63FE61C4A91F200124A8A = {
 			isa = PBXGroup;
 			children = (
@@ -75,21 +97,15 @@
 		CEA63FF11C4A91F200124A8A /* SocialSharing */ = {
 			isa = PBXGroup;
 			children = (
+				CE2044EA1CA4374000684120 /* twitter */,
+				CE2044E91CA4372B00684120 /* Flikr */,
 				CEA63FF51C4A91F200124A8A /* AppDelegate.h */,
 				CEA63FF61C4A91F200124A8A /* AppDelegate.m */,
-				CEA63FF81C4A91F200124A8A /* ViewController.h */,
-				CEA63FF91C4A91F200124A8A /* ViewController.m */,
 				CEA63FFB1C4A91F200124A8A /* Main.storyboard */,
+				CE2044E71CA4355700684120 /* Launch Screen.storyboard */,
 				CEA63FFE1C4A91F200124A8A /* Assets.xcassets */,
-				CEA640001C4A91F200124A8A /* LaunchScreen.storyboard */,
 				CEA640031C4A91F200124A8A /* Info.plist */,
 				CEA63FF21C4A91F200124A8A /* Supporting Files */,
-				CE7B15221C4EBFF600BD0D36 /* TableViewCell.h */,
-				CE7B15231C4EBFF600BD0D36 /* TableViewCell.m */,
-				CE6681EE1C53BFAF00B4C69C /* FlickrViewController.h */,
-				CE6681EF1C53BFAF00B4C69C /* FlickrViewController.m */,
-				CE6681F11C54034E00B4C69C /* DetailsViewController.h */,
-				CE6681F21C54034E00B4C69C /* DetailsViewController.m */,
 			);
 			path = SocialSharing;
 			sourceTree = "<group>";
@@ -160,8 +176,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEA640021C4A91F200124A8A /* LaunchScreen.storyboard in Resources */,
 				CEA63FFF1C4A91F200124A8A /* Assets.xcassets in Resources */,
+				CE2044E81CA4355700684120 /* Launch Screen.storyboard in Resources */,
 				CEA63FFD1C4A91F200124A8A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -191,14 +207,6 @@
 				CEA63FFC1C4A91F200124A8A /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		CEA640001C4A91F200124A8A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CEA640011C4A91F200124A8A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
