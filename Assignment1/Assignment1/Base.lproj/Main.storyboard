@@ -509,11 +509,11 @@
             </objects>
             <point key="canvasLocation" x="2831" y="1263"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Table-->
         <scene sceneID="8gw-ye-pBj">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bvT-MD-dT5" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" badgeValue="TableView" systemItem="featured" id="ShS-U8-uUW"/>
+                    <tabBarItem key="tabBarItem" title="Table" image="map_pin.png" selectedImage="map_pin.png" id="ShS-U8-uUW" colorLabel="IBBuiltInLabel-Red"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1hK-gj-PHJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -548,11 +548,11 @@
             </objects>
             <point key="canvasLocation" x="42" y="613"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Collection-->
         <scene sceneID="Qo3-0p-Kdx">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rzl-XU-2ss" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" badgeValue="Collection" systemItem="featured" id="FA1-tB-JhF"/>
+                    <tabBarItem key="tabBarItem" title="Collection" image="map_pin.png" id="FA1-tB-JhF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="awN-aq-5ae">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -570,6 +570,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="map_pin.png" width="20" height="20"/>
         <image name="photo-frame.png" width="297" height="199"/>
     </resources>
     <inferredMetricsTieBreakers>

@@ -34,6 +34,7 @@
 		CEA13EF61CA6A10400A421EF /* white_chocolate_donut.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CEA13EE61CA6A10400A421EF /* white_chocolate_donut.jpg */; };
 		CEA13EF81CA6A15F00A421EF /* photo-frame@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA13EF71CA6A15F00A421EF /* photo-frame@2x.png */; };
 		CEA13EFA1CA6A18E00A421EF /* photo-frame.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA13EF91CA6A18E00A421EF /* photo-frame.png */; };
+		CEA13EFD1CA6D06000A421EF /* map_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = CEA13EFC1CA6D06000A421EF /* map_pin.png */; };
 		CECE151A1C19F5EF0070BC8F /* DetailTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE15191C19F5EF0070BC8F /* DetailTableViewController.m */; };
 		CECE151D1C19FF8E0070BC8F /* Recipe.m in Sources */ = {isa = PBXBuildFile; fileRef = CECE151C1C19FF8E0070BC8F /* Recipe.m */; };
 /* End PBXBuildFile section */
@@ -73,6 +74,7 @@
 		CEA13EE61CA6A10400A421EF /* white_chocolate_donut.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = white_chocolate_donut.jpg; sourceTree = "<group>"; };
 		CEA13EF71CA6A15F00A421EF /* photo-frame@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-frame@2x.png"; sourceTree = "<group>"; };
 		CEA13EF91CA6A18E00A421EF /* photo-frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "photo-frame.png"; sourceTree = "<group>"; };
+		CEA13EFC1CA6D06000A421EF /* map_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = map_pin.png; sourceTree = "<group>"; };
 		CECE15181C19F5EF0070BC8F /* DetailTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailTableViewController.h; sourceTree = "<group>"; };
 		CECE15191C19F5EF0070BC8F /* DetailTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailTableViewController.m; sourceTree = "<group>"; };
 		CECE151B1C19FF8E0070BC8F /* Recipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipe.h; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 		CEA13EFB1CA6A29E00A421EF /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CEA13EFC1CA6D06000A421EF /* map_pin.png */,
 				CEA13EF71CA6A15F00A421EF /* photo-frame@2x.png */,
 				CEA13EF91CA6A18E00A421EF /* photo-frame.png */,
 				CEA13ED71CA6A10400A421EF /* angry_birds_cake.jpg */,
@@ -236,6 +239,7 @@
 				CEA13EE81CA6A10400A421EF /* creme_brelee.jpg in Resources */,
 				CEA13EF11CA6A10400A421EF /* mushroom_risotto.jpg in Resources */,
 				CEA13EEF1CA6A10400A421EF /* instant_noodle_with_egg.jpg in Resources */,
+				CEA13EFD1CA6D06000A421EF /* map_pin.png in Resources */,
 				CE3DA20A1C18A7CB00C38C7A /* Assets.xcassets in Resources */,
 				CEA13EF01CA6A10400A421EF /* japanese_noodle_with_pork.jpg in Resources */,
 				CEA13EEC1CA6A10400A421EF /* ham_and_cheese_panini.jpg in Resources */,
