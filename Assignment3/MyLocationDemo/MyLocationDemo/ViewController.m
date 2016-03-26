@@ -40,8 +40,6 @@
 
 
 - (IBAction)getCurrentLocation:(id)sender {
-    NSLog(@"hello suhaib");
-    //self.longitudeLabel.text = [NSString stringWithFormat:@"%.8f", @"suhaib"];
     locationManager.delegate = self;
     locationManager.desiredAccuracy = kCLLocationAccuracyBest;
     // Check for iOS 8. Without this guard the code will crash with "unknown selector" on iOS 7.

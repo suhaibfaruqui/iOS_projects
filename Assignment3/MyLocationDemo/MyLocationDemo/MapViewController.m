@@ -12,6 +12,8 @@
 @interface MapViewController ()
 {
     NSMutableArray *placemarksAll;
+    UIView *calloutView;
+
 }
 
 @end
@@ -81,16 +83,10 @@
             
             if (error == nil && [placemarks count] > 0) {
                 placemark = [placemarks lastObject];
-                /*
-                 addressLabel.text = [NSString stringWithFormat:@"%@ %@\n%@ %@\n%@\n%@",
-                 placemark.subThoroughfare, placemark.thoroughfare,
-                 placemark.postalCode, placemark.locality,
-                 placemark.administrativeArea,
-                 placemark.country];
-                 */
                 NSLog(@"%@", placemark.name);
                 myLocation.title = [placemark name];
                 myLocation.subtitle = placemark.administrativeArea;
+               // }
 
                 
             } else {
@@ -100,28 +96,16 @@
         
         
         //*******
-
-        
-        
         
         MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:@"MyCustomAnnotation"];
         
         
-        //UILabel *addressLabel = [self getAddress];
-        //printf("NSString: %s\n", [addressLabel.text UTF8String]);
         if (annotationView == nil)
             annotationView = myLocation.annotationView;
         else
         {
             annotationView.annotation = annotation;
-            //   annotationView.detailCalloutAccessoryView = addressLabel;
         }
-       // annotationView.leftCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-        // UILabel *addressLabel = [self getAddress];
-        //  printf("NSString: %s\n", addressLabel.text);
-        //annotationView.detailCalloutAccessoryView = [self getAddress];
-        //NSLog(@"Value of rock = %@", [[self getAddress] text]);
-        
         
         
         annotationView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
@@ -162,23 +146,24 @@
              // NSMutableArray *placemarksAll = [NSMutableArray array];
              for (MKMapItem *item in response.mapItems) {
                  //[placemarks addObject:item.placemark];
-                 //NSLog(@"%@", item.placemark.name);
+                 //NSLog(@"%@", item.placemark.coordinate.latitude);
                  MyCustomAnnotation *point = [[MyCustomAnnotation alloc] initWithLocation:item.placemark.coordinate];
                  //  [mapView addAnnotation:point];
                  [placemarksAll addObject:point];
                  //[mapView addAnnotation:item.placemark];
                  //[mapView showAnnotations:placemarksAll animated:NO];
                  if ([point conformsToProtocol:@protocol(MKAnnotation)]) {
-[mapView showAnnotations:placemarksAll animated:NO];
+//[mapView showAnnotations:placemarksAll animated:NO];
     //                 [mapView removeAnnotations:[mapView annotations]];
-//                     [mapView addAnnotations:placemarksAll];
+    
+                  //   [self.mapView addAnnotation:point];
                                     }
                  
              }
              //MyCustomAnnotation *point = [[MyCustomAnnotation alloc] init];
              //[mapView removeAnnotations:[mapView annotations]];
              dispatch_async(dispatch_get_main_queue(), ^{
-                 //  [mapView showAnnotations:placemarksAll animated:NO];
+                // [mapView showAnnotations:placemarksAll animated:NO];
              });
          }];
     
@@ -190,6 +175,19 @@
      }
 
 - (IBAction)details:(id)sender {
+    /*
+    for (int i=(int)placemarksAll.count; i>0; i--)
+    {
+    [self.mapView showAnnotations:placemarksAll animated:NO];
+        [placemarksAll removeObjectAtIndex:i-1];
+    }
+    */
+    for (int i=0; i<placemarksAll.count; i++)
+    {
+        [self.mapView showAnnotations:placemarksAll animated:NO];
+        NSLog(@"%d", i);
+    }
+    /*
     for (int i=0; i<placemarksAll.count; i++)
     {
         NSLog(@"%lu", (unsigned long)placemarksAll.count);
@@ -199,6 +197,9 @@
             //[NSThread sleepForTimeInterval:.5];
         });
     }
+     */
 
 }
+
+
 @end

@@ -190,7 +190,7 @@
             </objects>
             <point key="canvasLocation" x="3498" y="335.25"/>
         </scene>
-        <!--View Controller-->
+        <!--Location-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
@@ -392,7 +392,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" badgeValue="Location" selectedImage="image1.jpg" systemItem="featured" id="9Sd-Dr-rGx"/>
+                    <tabBarItem key="tabBarItem" title="Location" image="map_pin.png" selectedImage="image1.jpg" id="9Sd-Dr-rGx"/>
                     <connections>
                         <outlet property="addressLabel" destination="Iiu-0A-6bA" id="DGj-ag-26n"/>
                         <outlet property="latitudeLabel" destination="d3L-gS-vYK" id="s66-Oy-dGa"/>
@@ -526,5 +526,6 @@
     </scenes>
     <resources>
         <image name="image1.jpg" width="22" height="21"/>
+        <image name="map_pin.png" width="20" height="20"/>
     </resources>
 </document>
