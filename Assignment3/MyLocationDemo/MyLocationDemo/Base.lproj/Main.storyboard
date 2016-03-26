@@ -57,6 +57,17 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="My Home Location" id="FUd-Ww-u8U">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="SfJ-1E-Jnt">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bGc-i8-LX6">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <animations/>
+                                <state key="normal" title="This"/>
+                                <connections>
+                                    <action selector="details:" destination="hWE-Ub-BLA" eventType="touchUpInside" id="ltK-Cf-Dxr"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="plain" id="GGc-JO-Z1g">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FEt-8Z-g7D">
                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>

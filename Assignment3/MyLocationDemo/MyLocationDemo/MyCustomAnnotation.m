@@ -20,13 +20,12 @@
 }
 */
 @synthesize title;
-@synthesize coordinate;
+//@synthesize coordinate;
 @synthesize subtitle;
 -(id)initWithLocation:(CLLocationCoordinate2D)location {
-    self = [super init];
-    if (self) {
-       // _title = newTitile;
-        coordinate = location;
+if ((self = [super init])) {
+    // _title = newTitile;
+        _coordinate = location;
     }
     return self;
 }

@@ -10,6 +10,9 @@
 #import "MyCustomAnnotation.h"
 
 @interface MapViewController ()
+{
+    NSMutableArray *placemarksAll;
+}
 
 @end
 
@@ -27,6 +30,7 @@
     //[locationManager requestWhenInUseAuthorization];
     geocoder = [[CLGeocoder alloc] init];
     self.mapView.delegate = self;
+    placemarksAll = [[NSMutableArray alloc] init];
     // Do any additional setup after loading the view.
 }
 
@@ -61,13 +65,12 @@
 {
     if ([annotation isKindOfClass:[MyCustomAnnotation class]])
     {
-       
         
         
         MyCustomAnnotation *myLocation = (MyCustomAnnotation *) annotation;
-        CLLocation *currentLocation = [[CLLocation alloc] initWithLatitude:28.549787 longitude:77.301316];
+        CLLocation *currentLocation = [[CLLocation alloc] initWithLatitude:annotation.coordinate.latitude longitude:annotation.coordinate.longitude];
         
-
+        //CLLocation *currentLocation1 = annotation.coordinate.;
         
         //******
       //  CLLocation *currentLocation = CLLocationCoordinate2DMake(28.549787,77.301316);
@@ -75,6 +78,7 @@
 
         [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
             //NSLog(@"Found placemarks: %@, error: %@", placemarks, error);
+            
             if (error == nil && [placemarks count] > 0) {
                 placemark = [placemarks lastObject];
                 /*
@@ -84,7 +88,8 @@
                  placemark.administrativeArea,
                  placemark.country];
                  */
-                myLocation.title = placemark.name;
+                NSLog(@"%@", placemark.name);
+                myLocation.title = [placemark name];
                 myLocation.subtitle = placemark.administrativeArea;
 
                 
@@ -153,19 +158,47 @@
     
     // Start the search and display the results as annotations on the map.
     [search startWithCompletionHandler:^(MKLocalSearchResponse *response, NSError *error)
-    {
-        NSMutableArray *placemarks = [NSMutableArray array];
-        for (MKMapItem *item in response.mapItems) {
-            //[placemarks addObject:item.placemark];
-            NSLog(@"%@", item.placemark.name);
-            MyCustomAnnotation *point = [[MyCustomAnnotation alloc] initWithLocation:item.placemark.coordinate];
-          //  [mapView addAnnotation:point];
-            [placemarks addObject:point];
+         {
+             // NSMutableArray *placemarksAll = [NSMutableArray array];
+             for (MKMapItem *item in response.mapItems) {
+                 //[placemarks addObject:item.placemark];
+                 //NSLog(@"%@", item.placemark.name);
+                 MyCustomAnnotation *point = [[MyCustomAnnotation alloc] initWithLocation:item.placemark.coordinate];
+                 //  [mapView addAnnotation:point];
+                 [placemarksAll addObject:point];
+                 //[mapView addAnnotation:item.placemark];
+                 //[mapView showAnnotations:placemarksAll animated:NO];
+                 if ([point conformsToProtocol:@protocol(MKAnnotation)]) {
+[mapView showAnnotations:placemarksAll animated:NO];
+    //                 [mapView removeAnnotations:[mapView annotations]];
+//                     [mapView addAnnotations:placemarksAll];
+                                    }
+                 
+             }
+             //MyCustomAnnotation *point = [[MyCustomAnnotation alloc] init];
+             //[mapView removeAnnotations:[mapView annotations]];
+             dispatch_async(dispatch_get_main_queue(), ^{
+                 //  [mapView showAnnotations:placemarksAll animated:NO];
+             });
+         }];
+    
+    NSLog(@"%lu", (unsigned long)placemarksAll.count);
+    
+   
+     
+    
+     }
 
-        }
-        //MyCustomAnnotation *point = [[MyCustomAnnotation alloc] init];
-        //[mapView removeAnnotations:[mapView annotations]];
-       [mapView showAnnotations:placemarks animated:NO];
-    }];
+- (IBAction)details:(id)sender {
+    for (int i=0; i<placemarksAll.count; i++)
+    {
+        NSLog(@"%lu", (unsigned long)placemarksAll.count);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSLog(@"%@", [placemarksAll objectAtIndex:i]);
+            [self mapView:self.mapView viewForAnnotation:[placemarksAll objectAtIndex:i]];
+            //[NSThread sleepForTimeInterval:.5];
+        });
+    }
+
 }
 @end

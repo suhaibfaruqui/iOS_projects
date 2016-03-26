@@ -23,6 +23,7 @@
 @synthesize latitudeLabel;
 @synthesize addressLabel;
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     locationManager = [[CLLocationManager alloc] init];
