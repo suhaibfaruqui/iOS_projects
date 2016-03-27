@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "C8F56797E44334DF995A17AD1381F96C7894D14D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "C8F56797E44334DF995A17AD1381F96C7894D14D" : 0,
+    "5DD5E90113B00A41CA84578EF92A6F587FA3E5A2" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "3FE2CB30-FDEC-42BC-932A-B492C4231B62",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "C8F56797E44334DF995A17AD1381F96C7894D14D" : "SocialSharing\/",
+    "5DD5E90113B00A41CA84578EF92A6F587FA3E5A2" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "SocialSharing",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "SocialSharing.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/suhaibu-optimus\/iOS_projects.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5DD5E90113B00A41CA84578EF92A6F587FA3E5A2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/suhaibu-optimus\/new.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "C8F56797E44334DF995A17AD1381F96C7894D14D"
+    }
+  ]
+}

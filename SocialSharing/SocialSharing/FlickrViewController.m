@@ -42,6 +42,14 @@ NSMutableArray *photolinkslarge;
     
     NSURL *url = [NSURL URLWithString:urlString];
     
+    NSData *data1 = [NSData dataWithContentsOfURL:url];
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data1
+                                                         options:kNilOptions
+                                                           error:nil];
+    NSLog(@"%@", [json class]);
+
+    
+    
     NSURLRequest *request = [[NSURLRequest alloc] initWithURL: url];
     NSURLConnection *connection = [[NSURLConnection alloc] initWithRequest:request delegate:self];
    
@@ -53,6 +61,8 @@ NSMutableArray *photolinkslarge;
                                                            error:nil];
 
     NSArray *photos = [[json objectForKey:@"photos"] objectForKey:@"photo"];
+    NSLog(@"%@", [photos class]);
+
     for (NSDictionary *photo in photos)
     {
         NSString *photoURLString =
