@@ -13,7 +13,6 @@
 		CE60FB551C330E5A006891CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE60FB531C330E5A006891CE /* Main.storyboard */; };
 		CE60FB571C330E5A006891CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE60FB561C330E5A006891CE /* Assets.xcassets */; };
 		CE60FB5A1C330E5A006891CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE60FB581C330E5A006891CE /* LaunchScreen.storyboard */; };
-		CE60FB621C330F76006891CE /* angry_birds_cake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CE60FB611C330F76006891CE /* angry_birds_cake.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		CE60FB561C330E5A006891CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE60FB591C330E5A006891CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE60FB5B1C330E5A006891CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CE60FB611C330F76006891CE /* angry_birds_cake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = angry_birds_cake.jpg; path = "../../../ios downloads/RecipeBookImage/angry_birds_cake.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +58,6 @@
 		CE60FB491C330E59006891CE /* Assignment5 */ = {
 			isa = PBXGroup;
 			children = (
-				CE60FB611C330F76006891CE /* angry_birds_cake.jpg */,
 				CE60FB4D1C330E59006891CE /* AppDelegate.h */,
 				CE60FB4E1C330E5A006891CE /* AppDelegate.m */,
 				CE60FB501C330E5A006891CE /* ViewController.h */,
@@ -142,7 +139,6 @@
 			files = (
 				CE60FB5A1C330E5A006891CE /* LaunchScreen.storyboard in Resources */,
 				CE60FB571C330E5A006891CE /* Assets.xcassets in Resources */,
-				CE60FB621C330F76006891CE /* angry_birds_cake.jpg in Resources */,
 				CE60FB551C330E5A006891CE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +299,7 @@
 				CE60FB601C330E5A006891CE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
